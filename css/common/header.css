@@ -1,0 +1,199 @@
+/*웹폰트*/
+@font-face {
+ font-family: 'twaysky';
+ src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+ font-weight: normal;
+ font-style: normal;
+}
+
+@font-face {
+ font-family: 'MinSans-Light';
+ src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Light.woff') format('woff');
+ font-weight: normal;
+ font-style: normal;
+}
+
+@font-face {
+ font-family: 'MinSans-Medium';
+ src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff') format('woff');
+ font-weight: normal;
+ font-style: normal;
+}
+
+
+
+/*header 시작*/
+
+#wrap {}
+
+.header {
+ width: 100%;
+ background-color: rgb(83, 12, 3);
+}
+
+.header {
+ width: 100%;
+ height: auto;
+ position: sticky;
+ top: 0;
+ z-index: 999999;
+}
+
+.header .inner-header {
+ display: flex;
+ justify-content: center;
+ padding: 5px;
+}
+
+.header .inner-header .nav {
+ flex: 0 1 1200px;
+ display: flex;
+ justify-content: space-between;
+}
+
+.header .inner-header .nav .left-menu {
+ flex: 0 0 100px;
+ display: flex;
+ justify-content: flex-start;
+}
+
+.header .inner-header .nav .left-menu span.menu {
+ width: 50px;
+ line-height: 50px;
+ text-align: center;
+ font-weight: 800;
+ color: rgb(255, 255, 255);
+ transition: all 0.2s ease-in-out;
+}
+
+.header .inner-header .nav .left-menu span.menu:hover {
+ cursor: pointer;
+ background-color: rgb(255, 255, 255);
+ color: rgb(83, 12, 3);
+}
+
+.header .inner-header .nav .left-menu span.menu:active+.gnb {
+ left: 0;
+}
+
+.header .inner-header .nav .left-menu .gnb {
+ position: fixed;
+ background-color: rgba(110, 48, 48, 0.815);
+ left: -100%;
+ top: 0;
+ width: 50vw;
+ height: 100vh;
+ box-sizing: border-box;
+ padding: 30px;
+ transition: all 0.2s ease-in-out;
+}
+
+.header .inner-header .nav .left-menu .gnb:hover {
+ left: 0;
+}
+
+.header .inner-header .nav .left-menu .gnb>ul {
+ display: flex;
+ flex-direction: column;
+ background-color: rgb(255, 255, 255)
+}
+
+.header .inner-header .nav .left-menu .gnb>ul>li {
+ background-color: rgba(83, 12, 3, 0.932);
+ line-height: 50px;
+ text-align: center;
+}
+
+.header .inner-header .nav .left-menu .gnb>ul>li>a {
+ font-family: 'twaysky';
+ color: white;
+}
+
+.header .inner-header .nav .left-menu .gnb>ul>li:hover {
+ background-color: rgb(83, 12, 3);
+ color: white;
+ cursor: pointer;
+}
+
+.header .inner-header .nav .left-menu .gnb>ul>li:hover a {
+ color: inherit;
+}
+
+.header .inner-header .nav .left-menu .gnb>ul>li ul.sub {
+ display: none;
+}
+
+.header .inner-header .nav .left-menu .gnb>ul>li:hover ul.sub {
+ display: block;
+}
+
+.header .inner-header .nav .left-menu .gnb>ul>li ul.sub>li {
+ background-color: rgb(255, 255, 255);
+ text-indent: 20px;
+}
+
+.header .inner-header .nav .left-menu .gnb>ul>li ul.sub>li>a {
+ color: black;
+ font-size: 16px;
+ font-family: 'MinSans-Light';
+}
+
+.header .inner-header .nav .left-menu .gnb>ul>li ul.sub>li:hover {
+ background-color: rgb(83, 12, 3);
+ color: white;
+ cursor: pointer;
+}
+
+.header .inner-header .nav .left-menu .gnb>ul>li ul.sub>li:hover a {
+ color: inherit;
+}
+
+.header .inner-header .nav h1.logo {
+ flex: 0 0 150px;
+ height: auto;
+}
+
+.header .inner-header .nav h1.logo img {
+ width: 100%;
+ height: auto;
+ display: block;
+}
+
+.header .inner-header .nav .right-menu {
+ flex: 0 0 100px;
+ color: white;
+ text-align: center;
+ line-height: 50px;
+ font-size: 16px;
+ transition: all 0.2s ease-in-out;
+ font-family: 'twaysky';
+}
+
+.header .inner-header .nav .right-menu:hover {
+ cursor: pointer;
+ background-color: rgb(255, 255, 255);
+ color: rgb(83, 12, 3);
+}
+
+
+
+
+/*태블릿버전*/
+@media only screen and (max-width:959px) {
+
+}
+
+/*모바일버전*/
+@media only screen and (max-width:640px) {
+ .header .inner-header .nav .left-menu .gnb>ul>li ul.sub>li {
+  text-indent: 5px;
+ }
+
+ .header .inner-header .nav .left-menu .gnb>ul>li>a {
+  font-size: 12px;
+ }
+
+ .header .inner-header .nav .right-menu {
+  font-size: 14px;
+ }
+}
